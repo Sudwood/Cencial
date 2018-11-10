@@ -1,10 +1,8 @@
 package com.sudwood.cencial;
 
-import org.apache.logging.log4j.Level;
-
 import net.minecraftforge.common.config.Configuration;
 
-import com.sudwood.cencial.proxy.CommonProxy;
+import org.apache.logging.log4j.Level;
 
 public class Config {
 
@@ -18,7 +16,7 @@ public class Config {
     // Call this from CommonProxy.preInit(). It will create our config if it doesn't
     // exist yet and read the values if it does exist.
     public static void readConfig() {
-        Configuration cfg = CommonProxy.config;
+        Configuration cfg = CencialMod.config;
         try {
             cfg.load();
             initGeneralConfig(cfg);

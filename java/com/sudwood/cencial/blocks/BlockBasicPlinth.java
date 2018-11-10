@@ -28,7 +28,7 @@ import com.sudwood.cencial.Reference;
 import com.sudwood.cencial.items.CencialItems;
 import com.sudwood.cencial.tileentities.TileEntityBasicPlinth;
 
-public class BlockBasicPlinth extends BaseBlock
+public class BlockBasicPlinth extends CencialBase
 {
 	public static final PropertyBool DISCHARGING = PropertyBool.create("discharging");
 	public static final PropertyBool CHARGING = PropertyBool.create("charging");
@@ -95,30 +95,6 @@ public class BlockBasicPlinth extends BaseBlock
      * @param pos
      * @param type 0 - discharing 1 - charging
      */
-    public static void setState(boolean active, World world, BlockPos pos, int type)
-    {
-    	switch(type)
-    	{
-    	case 0: // discharging
-    		IBlockState state = world.getBlockState(pos);
-    		TileEntity tile = world.getTileEntity(pos);
-    		world.setBlockState(pos, CencialBlocks.basicPlinth.getDefaultState().withProperty(DISCHARGING, active));
-    		if(tile!=null)
-    		{
-    			tile.validate();world.setTileEntity(pos, tile);
-    		}
-    		break;
-    	case 1: // charging
-    		IBlockState state1 = world.getBlockState(pos);
-    		TileEntity tile1 = world.getTileEntity(pos);
-    		world.setBlockState(pos, CencialBlocks.basicPlinth.getDefaultState().withProperty(CHARGING, active));
-    		if(tile1!=null)
-    		{
-    			tile1.validate();world.setTileEntity(pos, tile1);
-    		}
-    		break;
-    	}
-    }
     
 	
 	 @SideOnly(Side.CLIENT)

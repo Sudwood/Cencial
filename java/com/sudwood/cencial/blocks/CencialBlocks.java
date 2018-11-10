@@ -15,15 +15,14 @@ import com.sudwood.cencial.CencialMod;
 
 public class CencialBlocks 
 {
-	public static ArrayList<BaseBlock> BLOCKS = new ArrayList<BaseBlock>();
+	public static ArrayList<CencialBase> BLOCKS = new ArrayList<CencialBase>();
 	
 	public static BlockBasicPlinth basicPlinth = new BlockBasicPlinth("basicplinth");
 	
 	@SideOnly(Side.CLIENT)
 	public static void initModels()
 	{
-		basicPlinth.initModel();
-		for(BaseBlock temp : BLOCKS)
+		for(CencialBase temp : BLOCKS)
 		{
 			temp.initModel();
 		}
