@@ -42,7 +42,7 @@ public class TileEntityBasicPlinth extends TileEntity implements ITickable
 
 	public void readFromNBT(NBTTagCompound compound)
     {
-		if(compound.getCompoundTag("Inventory")!=null)
+		if(!compound.getCompoundTag("inventory").equals(null))
 		inventory.deserializeNBT((NBTTagCompound) compound.getCompoundTag("inventory"));
 		burnTime = compound.getInteger("burnTime");
         super.readFromNBT(compound);
