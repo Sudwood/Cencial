@@ -1,0 +1,6 @@
+{
+    "defaults": {"model" :"cencial:basicplinth" },
+  "variants": {
+    "normal": {"model" :"cencial:basicplinth" }
+}
+}

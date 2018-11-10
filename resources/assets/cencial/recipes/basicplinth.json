@@ -1,0 +1,27 @@
+{
+  "result": {
+    "item": "cencial:basicplinth"
+  },
+  "pattern": [
+    "did",
+    "ere",
+    "did"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "i": {
+      "type": "forge:ore_dict",
+      "ore": "dyeBlue"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    },
+    "d": {
+      "item": "minecraft:cobblestone",
+      "data": 0
+    },
+    "e": {
+      "item": "minecraft:emerald"
+    }
+  }
+}
